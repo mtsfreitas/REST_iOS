@@ -17,6 +17,7 @@ struct WeatherData: Decodable {
 
     struct WeatherDescription: Decodable {
         let description: String
+        let icon: String
         // Outros campos relevantes para a descrição do clima
     }
 

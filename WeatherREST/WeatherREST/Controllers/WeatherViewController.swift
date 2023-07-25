@@ -13,8 +13,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
     @IBOutlet weak var weekLabel: UILabel!
     @IBOutlet weak var gradientView: UIView!
+    @IBOutlet weak var iconImage: UIImageView!
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,8 @@ class WeatherViewController: UIViewController {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = gradientView.bounds
         // Escolha as cores usando o valor hexadecimal
-        let startColor = UIColor(red: 73/255.0, green: 91/255.0, blue: 144/255.0, alpha: 1.0)
-        let endColor = UIColor(red: 3/255.0, green: 41/255.0, blue: 68/255.0, alpha: 1.00)
+        let startColor = UIColor(red: 85/255.0, green: 147/255.0, blue: 179/255.0, alpha: 1.0)
+        let endColor = UIColor(red: 163/255.0, green: 187/255.0, blue: 200/255.0, alpha: 1.0)
         
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0) // Ponto de início do gradiente (canto superior esquerdo)
@@ -32,7 +32,7 @@ class WeatherViewController: UIViewController {
         // Adicione o gradiente como subcamada da UIView
         gradientView.layer.addSublayer(gradientLayer)
         
-        let city = "Florestal" // Substitua pela cidade desejada
+        let city = "Belo%20Horizonte" // Substitua pela cidade desejada
         
         WeatherAPI.getWeatherData(forCity: city) { [weak self] weatherData, error in
             if let error = error {
@@ -40,7 +40,7 @@ class WeatherViewController: UIViewController {
                 print("Error fetching weather data: \(error)")
             } else if let weatherData = weatherData {
                 DispatchQueue.main.async {
-                    self?.cityNameLabel.text = weatherData.name.uppercased()
+                    self?.cityNameLabel.text = weatherData.name
                     
                     let formattedTemperature = String(format: "%.1f", weatherData.temperatureCelsius)
                     self?.temperatureLabel.text = "\(formattedTemperature) °C"
@@ -49,6 +49,12 @@ class WeatherViewController: UIViewController {
                     let currentTimestamp = Date().timeIntervalSince1970
                     let dayOfWeek = getDayOfWeek(fromTimestamp: currentTimestamp)
                     self?.weekLabel.text = dayOfWeek.camelCase
+                    
+                    WeatherAPI.getWeatherIcon(iconCode: weatherData.weather.first?.icon ?? "") { [weak self] iconImage in
+                        DispatchQueue.main.async {
+                            self?.iconImage.image = iconImage
+                        }
+                    }
                 }
             }
         }

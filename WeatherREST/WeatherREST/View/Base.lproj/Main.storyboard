@@ -20,16 +20,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xM0-ra-sB5">
+                                <rect key="frame" x="144" y="237.33333333333334" width="105" height="80.666666666666657"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxC-hF-B6n">
-                                <rect key="frame" x="20" y="99" width="353" height="33.666666666666657"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <rect key="frame" x="20" y="99" width="353" height="32.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvP-Jt-ady">
-                                <rect key="frame" x="20" y="458.66666666666669" width="353" height="21"/>
+                                <rect key="frame" x="20" y="466" width="353" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-YF-91K">
@@ -37,13 +40,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="HdJ-Fm-aT8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdm-kO-dRI">
-                                <rect key="frame" x="20" y="142.66666666666666" width="353" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="141.66666666666666" width="353" height="15.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -58,20 +61,25 @@
                             <constraint firstItem="yXp-2D-skR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7pP-ae-FGI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VxC-hF-B6n" secondAttribute="trailing" constant="20" id="D5Z-c0-zKP"/>
                             <constraint firstItem="ODN-YF-91K" firstAttribute="trailing" secondItem="vvP-Jt-ady" secondAttribute="trailing" id="Qsl-7d-DwA"/>
+                            <constraint firstItem="ODN-YF-91K" firstAttribute="top" secondItem="xM0-ra-sB5" secondAttribute="bottom" constant="78" id="RSt-3y-mYZ"/>
                             <constraint firstItem="ODN-YF-91K" firstAttribute="trailing" secondItem="Bdm-kO-dRI" secondAttribute="trailing" id="Raz-pz-cYM"/>
+                            <constraint firstItem="xM0-ra-sB5" firstAttribute="top" secondItem="Bdm-kO-dRI" secondAttribute="bottom" constant="80" id="Sta-oJ-fqo"/>
                             <constraint firstItem="Bdm-kO-dRI" firstAttribute="top" secondItem="VxC-hF-B6n" secondAttribute="bottom" constant="10" id="Z7a-nq-bQf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xM0-ra-sB5" secondAttribute="trailing" constant="144" id="Zwa-wb-DLD"/>
                             <constraint firstItem="VxC-hF-B6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dXL-JO-qTX"/>
                             <constraint firstItem="ODN-YF-91K" firstAttribute="leading" secondItem="vvP-Jt-ady" secondAttribute="leading" id="drW-pz-aRB"/>
                             <constraint firstItem="Bdm-kO-dRI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eO2-JI-Jwj"/>
                             <constraint firstItem="VxC-hF-B6n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="g7y-6a-END"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bdm-kO-dRI" secondAttribute="trailing" constant="20" id="gdB-Mc-c9q"/>
                             <constraint firstItem="ODN-YF-91K" firstAttribute="centerY" secondItem="yXp-2D-skR" secondAttribute="centerY" id="tak-Ox-tuK"/>
-                            <constraint firstItem="vvP-Jt-ady" firstAttribute="top" secondItem="ODN-YF-91K" secondAttribute="bottom" constant="2.6666666666666856" id="vMw-BF-mMz"/>
+                            <constraint firstItem="vvP-Jt-ady" firstAttribute="top" secondItem="ODN-YF-91K" secondAttribute="bottom" constant="10" id="wOS-FS-kCq"/>
+                            <constraint firstItem="xM0-ra-sB5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="zML-US-v7G"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityNameLabel" destination="VxC-hF-B6n" id="bwg-wQ-QYI"/>
                         <outlet property="gradientView" destination="yXp-2D-skR" id="AkE-p3-8GJ"/>
+                        <outlet property="iconImage" destination="xM0-ra-sB5" id="lgU-Ox-trn"/>
                         <outlet property="temperatureLabel" destination="ODN-YF-91K" id="VnK-fN-coR"/>
                         <outlet property="weatherDescriptionLabel" destination="vvP-Jt-ady" id="XkX-oR-E3g"/>
                         <outlet property="weekLabel" destination="Bdm-kO-dRI" id="Rs8-3g-cpL"/>
@@ -85,9 +93,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
